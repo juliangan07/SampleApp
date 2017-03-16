@@ -1,0 +1,10 @@
+{
+    "editor.wrappingColumn": 0,
+    "files.exclude": {
+        "**/node_modules": {},
+        "typings": {},
+        "**/*.js": {
+            "when": "$(basename).ts"
+        }
+    }
+}
