@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="row" *ngFor="let post of posts">
+    <div class="card card-block">
+      <a [routerLink]="['/posts', post.id]"><h4 class="card-title">{{ post.id }} &nbsp; {{ post.title }}</h4></a>
+    </div>
+  </div>
+</div>

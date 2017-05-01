@@ -1,0 +1,31 @@
+<div class="container" *ngIf="post">
+  <div class="row">
+    <div class="card card-block">
+        <h5>ID: {{post.id}}</h5>
+        <h5>UserID: {{post.userId}}</h5>
+        <h4>Title: {{post.title}}</h4>
+        <h4>Body: {{post.body}}</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <button (click)="goBack()">Back</button>
+  </div>
+</div>
+
+<br />
+
+<div class="container">
+  <div class="row">
+    <h5>Start Date: <input type="date" name="startDate" id="startDate" value="2015-01-01"/></h5>
+    <h5>End Date: &nbsp; <input type="date" name="endDate" id="endDate" value="2017-01-31"/></h5>
+    <button (click)="getTracker()">Get Tracker Data</button>
+  </div>
+  <div class="row" *ngFor="let t of tracker">
+    <div class="card card-block">
+        <h5>Date: {{t.date}}</h5>
+        <h5>Hits: {{t.hits}}</h5>
+        <h5>ID: {{t.id}}</h5>
+    </div>
+  </div>
+</div>
