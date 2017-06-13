@@ -1,0 +1,12 @@
+<div *ngIf="guest">
+             <h4>{{guest.name}} details:</h4>
+                <br />
+             <label>Name: </label> <input [(ngModel)]="guest.name" placeholder="name" />
+                <br />
+             <label>Location: </label> <input [(ngModel)]="guest.location" placeholder="location" />
+                <br />
+             <label>Guest of: </label> <input [(ngModel)]="guest.guest_of" placeholder="Guest of" />
+                <br />
+             <label>Favorite Album: </label> <input [(ngModel)]="guest.favourite_album" placeholder="Favorite Album" />
+             <button (click)="goBack()">Back</button>
+</div>

@@ -1,0 +1,16 @@
+<div>
+    <h2>Guest List</h2>
+
+    <div *ngIf="selectedGuest">
+        <h2>Guest selected: {{selectedGuest.name | uppercase}} &nbsp; <button (click)="gotoDetail()">View Details</button></h2>
+    </div>
+
+
+    <ol class="guests">
+        <li *ngFor="let guest of guests" (click)="onSelect(guest)" [class.selected]="guest === selectedGuest">
+            {{guest.name}}
+        </li>
+    </ol>
+</div>
+
+

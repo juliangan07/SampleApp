@@ -1,0 +1,9 @@
+<h3>George's Guest - {{guests.length}}</h3>
+<div class="grid grid-pad">
+  <div *ngFor="let guest of guests" class="col-1-4" [routerLink]="['/detail', guest.name]">
+    <div class="module guest">
+      <h4>{{guest.name}}</h4>
+    </div>
+  </div>
+</div>
+
